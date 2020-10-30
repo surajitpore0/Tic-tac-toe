@@ -27,7 +27,7 @@ function startGame() {
     CellElements.forEach(cell => {
         cell.classList.remove(X_CLASS)
         cell.classList.remove(CIRCLE_CLASS)
-        cell.addEventListener('click', handleClick)
+        cell.removeEventListener('click', handleClick)
         cell.addEventListener('click', handleClick, { once: true })
     })
     setBoardHoverClass()
